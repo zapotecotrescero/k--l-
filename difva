@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poesía Electrónica Interactiva</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .pajaro {
+    width: 300px;
+    height: 300px;
+    background-color: #fff; /* Blanco */
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-45deg);
+  }
+
+  .pajaro p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    color: #333; /* Color inicial del texto */
+    animation: movimiento 8s infinite alternate, cambio-color 5s infinite alternate; /* Animaciones */
+  }
+
+  @keyframes movimiento {
+    0% { transform: translate(-50%, -50%) rotate(45deg); }
+    50% { transform: translate(-50%, -50%) rotate(90deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  @keyframes cambio-color {
+    0% { color: #333; }
+    50% { color: #ff6347; } /* Cambia a rojo */
+    100% { color: #333; }
+  }
+</style>
+</head>
+<body>
+<div class="pajaro">
+  <p>gòʔ, mbìn Mdàn Prássá; 🐦</p>
+</div>
+</body>
+</html>
